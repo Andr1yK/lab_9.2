@@ -1,9 +1,8 @@
 ﻿#include <iostream>
 #include <iomanip>
-#include <Windows.h>
 
-#include "extendFunctions.hpp"
-#include "Student.hpp"
+#include "extendFunctions.cpp"
+#include "Student.cpp"
 
 using namespace std;
 
@@ -24,8 +23,7 @@ int BinSearch(
 
 int main()
 {
-  SetConsoleCP(1251);
-  SetConsoleOutputCP(1251);
+  setlocale(LC_CTYPE, "ukr");
 
   string specialtyList[] = {
     "Матем. та економіка",
@@ -120,8 +118,10 @@ int main()
       cout << " оцінка з фізики: "; cin >> findPhysics;
       cout << endl;
 
+      Sort(students, N);
+
       if ((found = BinSearch(students, N, findLastName, findRank, findPhysics)) != -1)
-        cout << "Знайдено працівника в позиції " << found + 1 << endl;
+        cout << "Знайдено студента в позиції " << found + 1 << endl;
       else
         cout << "Шуканого студента не знайдено" << endl;
 

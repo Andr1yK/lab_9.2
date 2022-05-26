@@ -10,35 +10,35 @@ void Fill(Student* students, const int N)
   unsigned specialty;
   for (int index = 0; index < N; index++)
   {
-    cout << "Ñòóäåíò ¹ " << index + 1 << ":" << endl;
+    cout << "Ğ¡Ñ‚ÑƒĞ´ĞµĞ½Ñ‚ â„– " << index + 1 << ":" << endl;
 
     cin.get(); cin.sync();
 
-    cout << " Ïğ³çâèùå: "; getline(cin, students[index].lastName);
+    cout << " ĞŸÑ€Ñ–Ğ·Ğ²Ğ¸Ñ‰Ğµ: "; getline(cin, students[index].lastName);
 
-    cout << " Êóğñ: "; cin >> students[index].rank;
+    cout << " ĞšÑƒÑ€Ñ: "; cin >> students[index].rank;
 
-    cout << " Ñïåö³àëüí³ñòü (0 - ÌÅ, 1 - ÌÔ, 2 - Ô², 3 - ²Í, 4 - ÊÍ): ";
+    cout << " Ğ¡Ğ¿ĞµÑ†Ñ–Ğ°Ğ»ÑŒĞ½Ñ–ÑÑ‚ÑŒ (0 - ĞœĞ•, 1 - ĞœĞ¤, 2 - Ğ¤Ğ†, 3 - Ğ†Ğ, 4 - ĞšĞ): ";
     cin >> specialty;
     students[index].specialty = (Specialty)specialty;
 
-    cout << " Îö³íêà ç ô³çèêè : "; cin >> students[index].physics;
-    cout << " Îö³íêà ç ìàòåìàòèêè : "; cin >> students[index].mathematics;
+    cout << " ĞÑ†Ñ–Ğ½ĞºĞ° Ğ· Ñ„Ñ–Ğ·Ğ¸ĞºĞ¸ : "; cin >> students[index].physics;
+    cout << " ĞÑ†Ñ–Ğ½ĞºĞ° Ğ· Ğ¼Ğ°Ñ‚ĞµĞ¼Ğ°Ñ‚Ğ¸ĞºĞ¸ : "; cin >> students[index].mathematics;
 
 
-    cout << " Îö³íêà ç ";
+    cout << " ĞÑ†Ñ–Ğ½ĞºĞ° Ğ· ";
     switch (students[index].specialty)
     {
     case KN:
-      cout << "ïğîãğàìóâàííÿ : "; cin >> students[index].programing;
+      cout << "Ğ¿Ñ€Ğ¾Ğ³Ñ€Ğ°Ğ¼ÑƒĞ²Ğ°Ğ½Ğ½Ñ : "; cin >> students[index].programing;
       break;
 
     case INF:
-      cout << "÷èñåëüíèõ ìåòîä³â : "; cin >> students[index].programing;
+      cout << "Ñ‡Ğ¸ÑĞµĞ»ÑŒĞ½Ğ¸Ñ… Ğ¼ĞµÑ‚Ğ¾Ğ´Ñ–Ğ² : "; cin >> students[index].programing;
       break;
 
     default:
-      cout << "ïåäåãîã³êè : "; cin >> students[index].pedagogy;
+      cout << "Ğ¿ĞµĞ´ĞµĞ³Ğ¾Ğ³Ñ–ĞºĞ¸ : "; cin >> students[index].pedagogy;
     }
 
     cout << endl;
@@ -53,15 +53,15 @@ void Print(
 #pragma region Header
   cout << "===========================================================================================================" << endl;
 
-  cout << "| " << setw(2) << "¹ " << " | "
-    << setw(12) << left << "Ïğ³çâèùå" << " | "
-    << setw(4) << "Êóğñ" << " | "
-    << setw(20) << "Ñïåö³àëüí³ñòü" << " | "
-    << setw(6) << "Ô³çèêà" << " | "
-    << setw(6) << "Ìàòåì." << " | "
-    << setw(8) << "Ïğîãğàì." << " | "
-    << setw(11) << "×èñ. ìåòîäè" << " | "
-    << setw(10) << "Ïåäàãîã³êà" << " |"
+  cout << "| " << setw(2) << "â„– " << " | "
+    << setw(12) << left << "ĞŸÑ€Ñ–Ğ·Ğ²Ğ¸Ñ‰Ğµ" << " | "
+    << setw(4) << "ĞšÑƒÑ€Ñ" << " | "
+    << setw(20) << "Ğ¡Ğ¿ĞµÑ†Ñ–Ğ°Ğ»ÑŒĞ½Ñ–ÑÑ‚ÑŒ" << " | "
+    << setw(6) << "Ğ¤Ñ–Ğ·Ğ¸ĞºĞ°" << " | "
+    << setw(6) << "ĞœĞ°Ñ‚ĞµĞ¼." << " | "
+    << setw(8) << "ĞŸÑ€Ğ¾Ğ³Ñ€Ğ°Ğ¼." << " | "
+    << setw(11) << "Ğ§Ğ¸Ñ. Ğ¼ĞµÑ‚Ğ¾Ğ´Ğ¸" << " | "
+    << setw(10) << "ĞŸĞµĞ´Ğ°Ğ³Ğ¾Ğ³Ñ–ĞºĞ°" << " |"
     << endl;
 
   cout << "-----------------------------------------------------------------------------------------------------------" << endl;

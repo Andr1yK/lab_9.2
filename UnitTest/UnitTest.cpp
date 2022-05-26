@@ -102,7 +102,6 @@ namespace UnitTest
         {"Melnyk",    3, FI,  1, 3, 5},
       };
 
-      Sort(students, N);
       int pos = BinSearch(students, N, "Koval", 3, 3);
 
       Assert::AreEqual(6, pos);
